@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LinguaMind AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>LinguaMind AI</h1>
+    <p class="tagline">AI Multilingual Text Summarizer</p>
+
+    <!-- Input Section -->
+    <div class="input-section">
+        <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+
+        <!-- NEW: Summary Length Control -->
+        <select id="lengthSelect">
+            <option value="20">Short Summary</option>
+            <option value="40">Medium Summary</option>
+            <option value="60">Detailed Summary</option>
+        </select>
+
+        <button onclick="generateSummary()">Generate Summary</button>
+        <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <!-- NEW: Compare View -->
+    <div class="compare-section">
+        <div class="compare-box">
+            <h3>Original Text</h3>
+            <p id="originalText"></p>
+        </div>
+
+        <div class="compare-box">
+            <h3>Generated English Summary</h3>
+            <p id="summaryOutput"></p>
+        </div>
+    </div>
+
+    <!-- Output Section -->
+    <div class="output-section">
+        <div class="box">
+            <h3>English Summary</h3>
+            <p id="englishOutput"></p>
+        </div>
+
+        <div class="box">
+            <h3>Hindi Summary</h3>
+            <p id="hindiOutput"></p>
+        </div>
+
+        <div class="box">
+            <h3>Telugu Summary</h3>
+            <p id="teluguOutput"></p>
+        </div>
+    </div>
+</div>
+
+<!-- PDF Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
